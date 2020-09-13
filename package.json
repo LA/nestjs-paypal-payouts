@@ -25,7 +25,9 @@
     "access": "public"
   },
   "peerDependencies": {
-    "@nestjs/common": "^6.0.0",
+    "@nestjs/common": "^6.0.0"
+  },
+  "dependencies": {
     "@paypal/payouts-sdk": "^1.0.0"
   },
   "devDependencies": {
