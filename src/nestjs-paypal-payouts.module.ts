@@ -7,8 +7,8 @@ import {
   NestjsPaypalPayoutsOptionsFactory,
 } from './interfaces';
 import { createNestjsPaypalPayoutsProviders } from './nestjs-paypal-payouts.providers';
-import { paypalClientFactory } from './nestjs-paypal-payouts-paypal-client.provider';
-import { paypalFactory } from './nestjs-paypal-payouts-paypal.provider';
+import { paypalClientFactory } from './providers/nestjs-paypal-payouts-paypal-client.provider';
+import { paypalFactory } from './providers/nestjs-paypal-payouts-paypal.provider';
 
 @Global()
 @Module({

@@ -17,15 +17,15 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "keywords": [
-    "nestjs"
+    "nestjs",
+    "paypal",
+    "payout"
   ],
   "publishConfig": {
     "access": "public"
   },
   "peerDependencies": {
-    "@nestjs/common": "^6.0.0"
-  },
-  "dependencies": {
+    "@nestjs/common": "^6.0.0",
     "@paypal/payouts-sdk": "^1.0.0"
   },
   "devDependencies": {

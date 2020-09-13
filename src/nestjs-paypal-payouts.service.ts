@@ -4,9 +4,7 @@ import { NESTJS_PAYPAL_PAYOUTS_OPTIONS } from './constants';
 import { NestjsPaypalPayoutsOptions } from './interfaces';
 const paypal = require('@paypal/payouts-sdk');
 
-interface INestjsPaypalPayoutsService {
-  test(): Promise<any>;
-}
+interface INestjsPaypalPayoutsService {}
 
 @Injectable()
 /**
@@ -51,12 +49,5 @@ export class NestjsPaypalPayoutsService implements INestjsPaypalPayoutsService {
       this._paypalClient = new paypal.core.PayPalHttpClient(environment);
     }
     return this._paypalClient;
-  }
-
-  async test(): Promise<any> {
-    return {
-      client: this.getPaypalClient(),
-      paypal: this.getPaypal(),
-    };
   }
 }

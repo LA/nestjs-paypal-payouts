@@ -10,15 +10,15 @@
  *  to delete this controller.
  */
 import { Controller, Get, Inject } from '@nestjs/common';
-import { NestjsPaypalPayoutsService } from '../nestjs-paypal-payouts.service';
-import { PAYPAL_CLIENT, PAYPAL } from '../constants';
+import { InjectPaypalClient } from '../decorators/InjectPaypalClient.decorator';
+import { InjectPaypal } from '../decorators/InjectPaypal.decorator';
 
 @Controller()
 export class NestjsPaypalPayoutsClientController {
   constructor(
-    @Inject(PAYPAL_CLIENT)
+    @InjectPaypalClient()
     private readonly paypalClient,
-    @Inject(PAYPAL)
+    @InjectPaypal()
     private readonly paypal,
   ) {}
 

@@ -1,8 +1,8 @@
-import { PAYPAL_CLIENT } from './constants';
-import { NestjsPaypalPayoutsService } from './nestjs-paypal-payouts.service';
+import { PAYPAL } from '../constants';
+import { NestjsPaypalPayoutsService } from '../nestjs-paypal-payouts.service';
 
 export const paypalFactory = {
-  provide: PAYPAL_CLIENT,
+  provide: PAYPAL,
   useFactory: async (
     nestjsPaypalPayoutsService: NestjsPaypalPayoutsService,
   ) => {
