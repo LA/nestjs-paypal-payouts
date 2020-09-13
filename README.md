@@ -15,7 +15,7 @@ yarn add nestjs-paypal-payouts
 @Module({
   imports: [
     NestjsPaypalPayoutsModule.register({
-      environment: process.env.PAYPAL_ENVIRONMENT, // 'sandbox' | 'live'
+      environment: process.env.PAYPAL_ENVIRONMENT as 'sandbox' | 'live',
       clientId: process.env.PAYPAL_CLIENT_ID,
       clientSecret: process.env.PAYPAL_CLIENT_SECRET,
     }),
